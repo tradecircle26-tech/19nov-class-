@@ -1,1 +1,546 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shree Coaching Classes | Best JEE, NEET & Board Coaching in Pimpri, Pune</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #f8fafc; color: #1e293b; line-height: 1.6; scroll-behavior: smooth; }
+        a { text-decoration: none; color: inherit; }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
+        
+        /* Top Bar */
+        .top-bar { background: #0f172a; color: #e2e8f0; font-size: 13px; padding: 8px 0; }
+        .top-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
+        .top-bar span { margin-right: 18px; }
+        .highlight { color: #f97316; font-weight: 600; }
 
+        /* Navbar */
+        header { background: #ffffff; box-shadow: 0 2px 10px rgba(0,0,0,0.08); position: sticky; top: 0; z-index: 100; }
+        .nav-wrap { display: flex; justify-content: space-between; align-items: center; padding: 14px 20px; max-width: 1200px; margin: 0 auto; }
+        .logo { display: flex; align-items: center; gap: 10px; }
+        .logo-box { width: 42px; height: 42px; background: #1e3a8a; color: #fff; font-weight: 800; font-size: 22px; border-radius: 8px; display: flex; align-items: center; justify-content: center; }
+        .logo-text h1 { font-size: 20px; color: #1e3a8a; line-height: 1.1; font-weight: 800; }
+        .logo-text span { font-size: 10px; letter-spacing: 2px; color: #f97316; font-weight: 700; text-transform: uppercase; }
+        nav { display: flex; gap: 22px; font-size: 14px; font-weight: 600; color: #334155; }
+        nav a:hover { color: #1e3a8a; }
+        .btn-primary { background: #f97316; color: #fff; padding: 10px 20px; border-radius: 8px; font-weight: 600; font-size: 14px; border: none; cursor: pointer; display: inline-block; transition: 0.2s; }
+        .btn-primary:hover { background: #ea580c; }
+        .btn-outline { background: rgba(255,255,255,0.12); color: #fff; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 14px; border: 1px solid rgba(255,255,255,0.35); display: inline-block; }
+        .mobile-btn { display: none; font-size: 24px; background: none; border: none; cursor: pointer; color: #1e3a8a; }
+
+        /* Hero */
+        .hero { background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 60%, #1d4ed8 100%); color: #fff; padding: 70px 0; }
+        .hero-grid { display: grid; grid-template-columns: 1.3fr 0.9fr; gap: 40px; align-items: center; }
+        .badge { display: inline-block; background: rgba(249,115,22,0.2); border: 1px solid #fb923c; color: #fdba74; font-size: 12px; padding: 5px 14px; border-radius: 20px; font-weight: 600; margin-bottom: 16px; }
+        .hero h2 { font-size: 42px; line-height: 1.2; font-weight: 800; margin-bottom: 16px; }
+        .hero p { color: #dbeafe; font-size: 16px; margin-bottom: 24px; }
+        .stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 15px; border-top: 1px solid rgba(255,255,255,0.15); padding-top: 20px; margin-bottom: 28px; }
+        .stats div strong { display: block; font-size: 26px; color: #fb923c; }
+        .stats div span { font-size: 12px; color: #bfdbfe; }
+        .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
+
+        /* Enquiry Card */
+        .enquiry-card { background: #fff; color: #1e293b; padding: 28px; border-radius: 16px; box-shadow: 0 20px 25px -5px rgba(0,0,0,0.25); }
+        .enquiry-card h3 { color: #1e3a8a; font-size: 20px; margin-bottom: 4px; }
+        .enquiry-card p { color: #64748b; font-size: 13px; margin-bottom: 18px; }
+        .form-group { margin-bottom: 14px; }
+        .form-group input, .form-group select { width: 100%; padding: 12px; border: 1px solid #cbd5e1; border-radius: 8px; font-size: 14px; outline: none; }
+        .form-group input:focus, .form-group select:focus { border-color: #1e3a8a; }
+
+        /* Sections */
+        section { padding: 65px 0; }
+        .sec-header { text-align: center; max-width: 650px; margin: 0 auto 45px; }
+        .sec-tag { color: #f97316; font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+        .sec-title { font-size: 32px; color: #1e3a8a; font-weight: 800; margin-top: 4px; }
+        .sec-desc { color: #64748b; font-size: 14px; margin-top: 8px; }
+
+        /* ESIP Banner */
+        .esip-box { background: linear-gradient(to right, #eff6ff, #fff7ed); border: 1px solid #dbeafe; border-radius: 16px; padding: 36px; display: flex; justify-content: space-between; align-items: center; gap: 24px; flex-wrap: wrap; }
+        .esip-content { flex: 1; min-width: 280px; }
+        .esip-pill { background: #1e3a8a; color: #fff; font-size: 11px; padding: 4px 12px; border-radius: 20px; font-weight: 700; text-transform: uppercase; }
+        .esip-content h3 { font-size: 26px; color: #1e3a8a; margin: 12px 0; }
+        .tags { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 16px; }
+        .tag-item { background: #fff; border: 1px solid #e2e8f0; padding: 6px 14px; border-radius: 8px; font-size: 12px; font-weight: 600; color: #1e3a8a; }
+
+        /* Cards Grid */
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+        .grid-5 { display: grid; grid-template-columns: repeat(5, 1fr); gap: 18px; }
+
+        /* Course Cards */
+        .course-card { background: #fff; border-radius: 14px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.06); border: 1px solid #e2e8f0; display: flex; flex-direction: column; justify-content: space-between; }
+        .course-head-blue { background: #1e3a8a; color: #fff; padding: 20px; }
+        .course-head-orange { background: #f97316; color: #fff; padding: 20px; }
+        .course-badge { background: rgba(255,255,255,0.2); font-size: 11px; padding: 3px 10px; border-radius: 4px; }
+        .course-head-blue h4, .course-head-orange h4 { font-size: 21px; margin-top: 8px; }
+        .course-body { padding: 20px; font-size: 14px; color: #475569; }
+        .course-body p { margin-bottom: 10px; }
+        .course-foot { padding: 0 20px 20px; }
+        .btn-card { display: block; text-align: center; padding: 10px; border: 2px solid #1e3a8a; color: #1e3a8a; border-radius: 8px; font-weight: 600; font-size: 14px; }
+        .btn-card:hover { background: #1e3a8a; color: #fff; }
+
+        /* Dark Section */
+        .dark-sec { background: #0f172a; color: #fff; }
+        .dark-sec .sec-title { color: #fff; }
+        .adv-card { background: #1e293b; border: 1px solid #334155; padding: 24px; border-radius: 12px; }
+        .adv-card h4 { font-size: 18px; margin-bottom: 8px; color: #fb923c; }
+        .adv-card p { font-size: 13px; color: #94a3b8; }
+
+        /* Toppers */
+        .filter-wrap { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 30px; }
+        .filter-btn { padding: 8px 18px; border-radius: 20px; border: none; font-size: 13px; font-weight: 600; cursor: pointer; background: #e2e8f0; color: #334155; }
+        .filter-btn.active { background: #1e3a8a; color: #fff; }
+        .topper-card { background: #fff; padding: 20px; border-radius: 12px; text-align: center; border: 1px solid #e2e8f0; box-shadow: 0 2px 6px rgba(0,0,0,0.04); }
+        .avatar { width: 60px; height: 60px; border-radius: 50%; background: #dbeafe; color: #1e3a8a; font-weight: 800; font-size: 18px; display: flex; align-items: center; justify-content: center; margin: 0 auto 12px; }
+        .topper-card h5 { font-size: 15px; color: #0f172a; }
+        .topper-card span { font-size: 11px; font-weight: 700; color: #f97316; display: block; margin-top: 4px; }
+
+        /* Blog & Testimonials */
+        .info-card { background: #fff; padding: 24px; border-radius: 12px; border: 1px solid #e2e8f0; box-shadow: 0 2px 8px rgba(0,0,0,0.04); display: flex; flex-direction: column; justify-content: space-between; }
+        .info-card h4 { color: #1e3a8a; font-size: 18px; margin: 8px 0; }
+        .info-card p { font-size: 14px; color: #475569; margin-bottom: 16px; }
+        .read-btn { background: none; border: none; color: #1e3a8a; font-weight: 700; font-size: 14px; cursor: pointer; text-align: left; }
+        .read-btn:hover { color: #f97316; }
+
+        /* FAQ */
+        details { background: #fff; padding: 18px; border-radius: 10px; border: 1px solid #e2e8f0; margin-bottom: 12px; }
+        summary { font-weight: 700; color: #1e3a8a; cursor: pointer; font-size: 15px; }
+        details p { margin-top: 10px; font-size: 14px; color: #475569; }
+
+        /* Centres */
+        .centre-card { background: #fff; padding: 22px; border-radius: 12px; border-top: 4px solid #1e3a8a; box-shadow: 0 2px 8px rgba(0,0,0,0.05); }
+        .centre-card.orange { border-top-color: #f97316; }
+        .centre-card h4 { color: #1e3a8a; font-size: 18px; margin-bottom: 8px; }
+        .centre-card p { font-size: 13px; color: #475569; margin-bottom: 8px; }
+
+        /* Footer */
+        footer { background: #020617; color: #94a3b8; padding: 50px 0 25px; font-size: 13px; }
+        .footer-grid { display: grid; grid-template-columns: 1.4fr 1fr 1fr 1.2fr; gap: 30px; padding-bottom: 35px; border-bottom: 1px solid #1e293b; }
+        footer h4 { color: #fff; font-size: 16px; margin-bottom: 14px; }
+        footer ul { list-style: none; }
+        footer ul li { margin-bottom: 8px; }
+        footer ul a:hover { color: #fff; }
+        .copyright { text-align: center; padding-top: 20px; font-size: 12px; color: #64748b; }
+
+        /* Floating WhatsApp & Modal */
+        .whatsapp-float { position: fixed; bottom: 24px; right: 24px; background: #22c55e; color: #fff; width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 26px; font-weight: bold; box-shadow: 0 10px 20px rgba(0,0,0,0.2); z-index: 200; }
+        .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.7); z-index: 300; align-items: center; justify-content: center; padding: 20px; }
+        .modal-box { background: #fff; max-width: 600px; width: 100%; border-radius: 16px; padding: 28px; position: relative; max-height: 85vh; overflow-y: auto; }
+        .close-modal { position: absolute; top: 16px; right: 20px; font-size: 24px; border: none; background: none; cursor: pointer; color: #64748b; }
+
+        /* Responsive */
+        @media (max-width: 900px) {
+            .hero-grid, .grid-3, .grid-4, .grid-5, .footer-grid { grid-template-columns: 1fr; }
+            nav { display: none; flex-direction: column; position: absolute; top: 70px; left: 0; right: 0; background: #fff; padding: 20px; box-shadow: 0 10px 15px rgba(0,0,0,0.1); }
+            nav.show { display: flex; }
+            .mobile-btn { display: block; }
+            .hero h2 { font-size: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="top-bar">
+        <div class="container">
+            <div>
+                <span>📞 +91 90962 12106</span>
+                <span>✉️ info@shreecoaching.com</span>
+            </div>
+            <div>
+                <a href="#centres" class="highlight">Spin Road, Pimpri, Pune</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="nav-wrap">
+            <a href="#" class="logo">
+                <div class="logo-box">S</div>
+                <div class="logo-text">
+                    <h1>SHREE COACHING</h1>
+                    <span>Classes • Pimpri, Pune</span>
+                </div>
+            </a>
+            <nav id="mainNav">
+                <a href="#esip">Integrated Program</a>
+                <a href="#courses">Courses</a>
+                <a href="#results">Results</a>
+                <a href="#blog">Blog & Strategy</a>
+                <a href="#testimonials">Reviews</a>
+                <a href="#centres">Location</a>
+            </nav>
+            <div style="display:flex; gap:10px; align-items:center;">
+                <a href="#enquiry" class="btn-primary">Enquiry Now</a>
+                <button class="mobile-btn" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <span class="badge">🏆 Proven Excellence in Pimpri-Chinchwad</span>
+                <h2>State Toppers & <span style="color:#fb923c;">AIR Rankers</span></h2>
+                <p>Selections in Top IITs, NITs, and Government Medical Colleges. Join Shree Coaching Classes for result-oriented JEE, NEET, and Board exam preparation.</p>
+                <div class="stats">
+                    <div><strong>1000+</strong><span>NEET Qualifiers</span></div>
+                    <div><strong>AIR 39</strong><span>Top National Rank</span></div>
+                    <div><strong>Pimpri</strong><span>Spin Road, Pune</span></div>
+                </div>
+                <div class="hero-btns">
+                    <a href="#courses" class="btn-primary">Explore Programs</a>
+                    <a href="#results" class="btn-outline">See Success Stories</a>
+                </div>
+            </div>
+
+            <!-- Enquiry Form -->
+            <div id="enquiry" class="enquiry-card">
+                <h3>Book Free Career Counselling</h3>
+                <p>Get a personalized study roadmap for JEE, NEET & Boards.</p>
+                <form id="enquiryForm">
+                    <div class="form-group">
+                        <input type="text" id="stName" placeholder="Student Full Name *" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="stPhone" placeholder="Mobile Number *" required>
+                    </div>
+                    <div class="form-group">
+                        <select id="stClass" required>
+                            <option value="">Select Current Class *</option>
+                            <option>Class VIII - X (Foundation)</option>
+                            <option>Class XI (2-Year Integrated)</option>
+                            <option>Class XII (1-Year Target)</option>
+                            <option>Repeater / Dropper Batch</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <select id="stStream" required>
+                            <option value="">Target Exam *</option>
+                            <option>School Integrated Program (XI-XII)</option>
+                            <option>Engineering (JEE Main & Advanced / MHT-CET)</option>
+                            <option>Medical (NEET-UG)</option>
+                            <option>Olympiads & NTSE</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary" style="width:100%; padding:13px;">Request Call Back →</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ESIP Section -->
+    <section id="esip" style="background:#fff; border-bottom:1px solid #e2e8f0;">
+        <div class="container">
+            <div class="esip-box">
+                <div class="esip-content">
+                    <span class="esip-pill">School + Competitive Prep</span>
+                    <h3>Shree Coaching Integrated Program</h3>
+                    <p style="color:#475569; font-size:15px;">Prepare for <strong>JEE, NEET, MHT-CET, and Olympiads</strong> right within the regular school schedule—eliminating daily travel exhaustion and keeping evenings free for self-study.</p>
+                    <div class="tags">
+                        <span class="tag-item">⚛️ Engineering (PCM)</span>
+                        <span class="tag-item">🧬 Medical (PCB)</span>
+                        <span class="tag-item">📖 Board + Entrance Synchronised</span>
+                    </div>
+                </div>
+                <div>
+                    <a href="#enquiry" class="btn-primary" style="background:#1e3a8a; padding:14px 26px;">Enquire for Class XI</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-tag">What We Offer</span>
+                <h2 class="sec-title">Programs Designed for Excellence</h2>
+                <p class="sec-desc">Structured batches tailored to every stage of a student's academic journey at Shree Coaching Classes.</p>
+            </div>
+            <div class="grid-3">
+                <div class="course-card">
+                    <div>
+                        <div class="course-head-blue">
+                            <span class="course-badge">Class VIII - X</span>
+                            <h4>Foundation Batches</h4>
+                        </div>
+                        <div class="course-body">
+                            <p>✓ Strong conceptual base in Science & Maths</p>
+                            <p>✓ NTSE, NSO, IMO & Olympiad preparation</p>
+                            <p>✓ School Board exam excellence</p>
+                        </div>
+                    </div>
+                    <div class="course-foot"><a href="#enquiry" class="btn-card">View Batch Details</a></div>
+                </div>
+
+                <div class="course-card">
+                    <div>
+                        <div class="course-head-orange">
+                            <span class="course-badge">Class XI - XII</span>
+                            <h4>Engineering (JEE & CET)</h4>
+                        </div>
+                        <div class="course-body">
+                            <p>✓ Complete JEE Main, Advanced & MHT-CET syllabus</p>
+                            <p>✓ BITSAT & speed-accuracy problem sessions</p>
+                            <p>✓ All-India CBT Test Series & Daily DPPs</p>
+                        </div>
+                    </div>
+                    <div class="course-foot"><a href="#enquiry" class="btn-card">View Batch Details</a></div>
+                </div>
+
+                <div class="course-card">
+                    <div>
+                        <div class="course-head-blue">
+                            <span class="course-badge">Class XI - XII+</span>
+                            <h4>Medical (NEET)</h4>
+                        </div>
+                        <div class="course-body">
+                            <p>✓ Line-by-line NCERT Biology & Chemistry mastery</p>
+                            <p>✓ Concept-based NEET Physics numericals</p>
+                            <p>✓ Full-length OMR mock tests & analysis</p>
+                        </div>
+                    </div>
+                    <div class="course-foot"><a href="#enquiry" class="btn-card">View Batch Details</a></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Advantage Section -->
+    <section class="dark-sec">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-tag">Why Choose Us</span>
+                <h2 class="sec-title">The Shree Coaching Advantage</h2>
+            </div>
+            <div class="grid-4">
+                <div class="adv-card">
+                    <h4>🎯 Result-Oriented Teaching</h4>
+                    <p>Focused curriculum designed to maximize scores in both board and competitive entrance exams.</p>
+                </div>
+                <div class="adv-card">
+                    <h4>📚 Comprehensive Material</h4>
+                    <p>Well-researched study modules covering the entire syllabus with graded practice sheets.</p>
+                </div>
+                <div class="adv-card">
+                    <h4>👨‍🏫 Expert Faculty</h4>
+                    <p>Experienced educators with proven track records in mentoring top rankers.</p>
+                </div>
+                <div class="adv-card">
+                    <h4>🏅 Proven Track Record</h4>
+                    <p>Consistent toppers and high-percentile achievers year after year in Pune.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toppers Section -->
+    <section id="results">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-tag">Our Pride</span>
+                <h2 class="sec-title">Toppers & Achievers</h2>
+            </div>
+            <div class="filter-wrap">
+                <button class="filter-btn active" onclick="filterToppers('all', this)">All Toppers</button>
+                <button class="filter-btn" onclick="filterToppers('neet', this)">NEET</button>
+                <button class="filter-btn" onclick="filterToppers('jee', this)">JEE / CET / ISI</button>
+                <button class="filter-btn" onclick="filterToppers('board', this)">Boards & NTSE</button>
+            </div>
+            <div class="grid-5">
+                <div class="topper-card" data-cat="neet"><div class="avatar">AB</div><h5>Abhida Barretto</h5><span>NEET • TOPPER</span></div>
+                <div class="topper-card" data-cat="jee"><div class="avatar">SC</div><h5>Supash Chodankar</h5><span>JEE MAIN • TOPPER</span></div>
+                <div class="topper-card" data-cat="jee"><div class="avatar">AK</div><h5>Anant Kerur</h5><span>ISI • 39th AIR</span></div>
+                <div class="topper-card" data-cat="neet"><div class="avatar">TK</div><h5>Tarun Kumar</h5><span>NEET • TOPPER</span></div>
+                <div class="topper-card" data-cat="board"><div class="avatar">VP</div><h5>Vaishnavi Potekar</h5><span>XII BOARD • TOPPER</span></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" style="background:#f1f5f9;">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-tag">Latest Updates</span>
+                <h2 class="sec-title">Resources & Insights</h2>
+            </div>
+            <div class="grid-3">
+                <div class="info-card">
+                    <div>
+                        <span class="sec-tag">Education Policy</span>
+                        <h4>NEET Exam Reforms: Ensuring Transparency</h4>
+                        <p>Why competitive exams need computer-based testing, strict security, and student-centric policies.</p>
+                    </div>
+                    <button class="read-btn" onclick="openArticle(0)">Read Full Article →</button>
+                </div>
+                <div class="info-card">
+                    <div>
+                        <span class="sec-tag">Integrated Learning</span>
+                        <h4>Where Your School IS Your Coaching</h4>
+                        <p>How a single integrated schedule eliminates academic burnout while preparing for Boards and JEE/NEET.</p>
+                    </div>
+                    <button class="read-btn" onclick="openArticle(1)">Read Full Article →</button>
+                </div>
+                <div class="info-card">
+                    <div>
+                        <span class="sec-tag">Exam Strategy</span>
+                        <h4>Complete NEET Roadmap: Subject Strategy</h4>
+                        <p>Subject-wise weightage for Biology, Physics, and Chemistry, and how to analyze mock tests effectively.</p>
+                    </div>
+                    <button class="read-btn" onclick="openArticle(2)">Read Full Article →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials & FAQ -->
+    <section id="testimonials">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-tag">Student & Parent Voices</span>
+                <h2 class="sec-title">What Families Say About Us</h2>
+            </div>
+            <div class="grid-3" style="margin-bottom:50px;">
+                <div class="info-card">
+                    <p>"Shree Coaching Classes saved my daughter from long daily commutes. She balanced her Class XII Boards and NEET preparation effortlessly."</p>
+                    <strong>— Dr. Rajesh Naik (Parent)</strong>
+                </div>
+                <div class="info-card">
+                    <p>"Regular mock tests and personal doubt-clearing sessions helped me identify my weak areas early and score top percentile."</p>
+                    <strong>— Supash Chodankar (JEE Topper)</strong>
+                </div>
+                <div class="info-card">
+                    <p>"The faculty mentors every student individually. Even when mock scores dipped, teachers guided me back on track."</p>
+                    <strong>— Abhida Barretto (NEET Topper)</strong>
+                </div>
+            </div>
+
+            <div style="max-width:800px; margin:0 auto;">
+                <h3 style="text-align:center; color:#1e3a8a; margin-bottom:20px; font-size:24px;">Frequently Asked Questions</h3>
+                <details>
+                    <summary>What is the Integrated Coaching Program?</summary>
+                    <p>It combines Class XI–XII Board preparation with JEE/NEET/MHT-CET coaching under a unified timetable, reducing stress and saving travel time.</p>
+                </details>
+                <details>
+                    <summary>Are scholarships available for admission?</summary>
+                    <p>Yes, students can appear for our Scholarship-cum-Admission Test or apply based on Class X Board / Olympiad scores.</p>
+                </details>
+                <details>
+                    <summary>Where is Shree Coaching Classes located?</summary>
+                    <p>Our institute is conveniently located at Spin Road, Pimpri, Pune. Call us at +91 90962 12106 for directions and counselling.</p>
+                </details>
+            </div>
+        </div>
+    </section>
+
+    <!-- Centres -->
+    <section id="centres" style="background:#f1f5f9;">
+        <div class="container">
+            <div class="sec-header">
+                <span class="sec-tag">Visit Us</span>
+                <h2 class="sec-title">Our Centre Location</h2>
+            </div>
+            <div style="max-width:550px; margin:0 auto;">
+                <div class="centre-card">
+                    <h4>Shree Coaching Classes — Main Campus</h4>
+                    <p>📍 Spin Road, Pimpri, Pune, Maharashtra</p>
+                    <p>📞 <strong>+91 90962 12106</strong></p>
+                    <p>🕒 Mon – Sat: 7:30 AM – 8:30 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container footer-grid">
+            <div>
+                <h3 style="color:#fff; font-size:20px; margin-bottom:10px;">SHREE COACHING <span style="color:#f97316;">CLASSES</span></h3>
+                <p>Premier coaching institute for JEE, NEET, MHT-CET, and Foundation courses in Pimpri-Chinchwad. Transforming ambition into achievement.</p>
+                <p style="margin-top:12px; color:#cbd5e1;">📍 Spin Road, Pimpri, Pune</p>
+            </div>
+            <div>
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="#esip">Integrated Program</a></li>
+                    <li><a href="#courses">Courses</a></li>
+                    <li><a href="#results">Results & Toppers</a></li>
+                    <li><a href="#enquiry">Admissions</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Courses</h4>
+                <ul>
+                    <li><a href="#courses">JEE Main & Advanced</a></li>
+                    <li><a href="#courses">NEET / Medical</a></li>
+                    <li><a href="#courses">MHT-CET & Boards</a></li>
+                    <li><a href="#courses">Foundation (VIII - X)</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Contact Us</h4>
+                <p>📞 +91 90962 12106</p>
+                <p style="margin-top:6px;">✉️ info@shreecoaching.com</p>
+                <p style="margin-top:6px;">📍 Spin Road, Pimpri, Pune</p>
+            </div>
+        </div>
+        <div class="copyright">© 2026 Shree Coaching Classes. All rights reserved.</div>
+    </footer>
+
+    <!-- Floating WhatsApp -->
+    <a href="https://wa.me/919096212106" target="_blank" class="whatsapp-float" title="Chat on WhatsApp">💬</a>
+
+    <!-- Article Modal -->
+    <div id="articleModal" class="modal">
+        <div class="modal-box">
+            <button class="close-modal" onclick="closeArticle()">×</button>
+            <span id="modalTag" class="sec-tag"></span>
+            <h3 id="modalTitle" style="color:#1e3a8a; font-size:22px; margin:8px 0 14px;"></h3>
+            <div id="modalBody" style="font-size:14px; color:#334155; line-height:1.7;"></div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById('mainNav').classList.toggle('show');
+        }
+
+        function filterToppers(cat, btn) {
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            document.querySelectorAll('.topper-card').forEach(card => {
+                card.style.display = (cat === 'all' || card.dataset.cat === cat) ? 'block' : 'none';
+            });
+        }
+
+        const articles = [
+            { tag: "Education Policy", title: "NEET Exam Reforms: Ensuring Transparency", body: "<p>Computer-Based Testing (CBT) with randomized question banks, biometric verification, and strict audit oversight are essential to protect hardworking students and restore trust in national entrance exams.</p>" },
+            { tag: "Integrated Learning", title: "Where Your School IS Your Coaching", body: "<p>Integrated coaching merges Class XI-XII Board syllabus with JEE, NEET, and MHT-CET preparation under one daily timetable—giving students proper sleep, doubt-solving time, and stress-free learning.</p>" },
+            { tag: "Exam Strategy", title: "Complete NEET Roadmap: Subject Strategy", body: "<p><strong>Biology (360 Marks):</strong> Master NCERT line-by-line.<br><strong>Chemistry (180 Marks):</strong> Focus on GOC, NCERT Inorganic tables, and Physical numericals.<br><strong>Physics (180 Marks):</strong> Build strong concepts and analyze every mock test mistake.</p>" }
+        ];
+
+        function openArticle(i) {
+            document.getElementById('modalTag').innerText = articles[i].tag;
+            document.getElementById('modalTitle').innerText = articles[i].title;
+            document.getElementById('modalBody').innerHTML = articles[i].body;
+            document.getElementById('articleModal').style.display = 'flex';
+        }
+
+        function closeArticle() {
+            document.getElementById('articleModal').style.display = 'none';
+        }
+
+        document.getElementById('enquiryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const name = document.getElementById('stName').value;
+            alert('धन्यवाद ' + name + '! आपकी काउंसलिंग रिक्वेस्ट Shree Coaching Classes में दर्ज हो गई है। हम जल्द ही आपसे संपर्क करेंगे।');
+            this.reset();
+        });
+    </script>
+</body>
+</html>
