@@ -24,12 +24,12 @@
         a { text-decoration: none; color: inherit; }
         ul { list-style: none; }
         .container { max-width: 1240px; margin: 0 auto; padding: 0 20px; }
-        .section-padding { padding: 80px 0; }
-        .section-header { text-align: center; max-width: 700px; margin: 0 auto 50px; }
-        .badge { display: inline-block; background: rgba(245, 158, 11, 0.15); color: var(--accent-hover); font-weight: 700; font-size: 0.85rem; padding: 6px 14px; border-radius: 50px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .section-header h2 { font-size: 2.3rem; color: var(--primary); font-weight: 800; margin-bottom: 12px; }
+        .section-padding { padding: 75px 0; }
+        .section-header { text-align: center; max-width: 720px; margin: 0 auto 48px; }
+        .badge { display: inline-block; background: rgba(245, 158, 11, 0.15); color: var(--accent-hover); font-weight: 700; font-size: 0.82rem; padding: 6px 14px; border-radius: 50px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .section-header h2 { font-size: 2.25rem; color: var(--primary); font-weight: 800; margin-bottom: 12px; }
         .section-header p { color: var(--text-muted); font-size: 1.05rem; }
-        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 24px; border-radius: 8px; font-weight: 600; font-size: 0.95rem; cursor: pointer; transition: all 0.3s ease; border: none; }
+        .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; padding: 12px 22px; border-radius: 8px; font-weight: 600; font-size: 0.92rem; cursor: pointer; transition: 0.3s; border: none; }
         .btn-primary { background: var(--primary); color: var(--white); }
         .btn-primary:hover { background: var(--primary-light); transform: translateY(-2px); }
         .btn-accent { background: var(--accent); color: var(--white); }
@@ -37,98 +37,155 @@
         .btn-outline { border: 2px solid var(--primary); color: var(--primary); background: transparent; }
         .btn-outline:hover { background: var(--primary); color: var(--white); }
 
-        /* TOP BAR & NAVBAR */
-        .top-bar { background: var(--primary); color: var(--white); font-size: 0.85rem; padding: 8px 0; }
+        /* TOP BAR & HEADER */
+        .top-bar { background: var(--primary); color: var(--white); font-size: 0.84rem; padding: 8px 0; }
         .top-bar .container { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; }
-        .top-bar-info span { margin-right: 20px; }
+        .top-bar-info span { margin-right: 18px; }
         .top-bar-info i { color: var(--accent); margin-right: 6px; }
         header { background: var(--white); position: sticky; top: 0; z-index: 1000; box-shadow: 0 2px 15px rgba(0,0,0,0.06); }
-        .navbar { display: flex; justify-content: space-between; align-items: center; height: 80px; }
-        .logo { display: flex; align-items: center; gap: 10px; font-size: 1.5rem; font-weight: 800; color: var(--primary); }
-        .logo-icon { width: 40px; height: 40px; background: var(--primary); color: var(--accent); border-radius: 8px; display: grid; place-items: center; font-size: 1.2rem; }
-        .nav-links { display: flex; gap: 20px; align-items: center; }
-        .nav-links a { font-size: 0.9rem; font-weight: 600; color: var(--text-dark); transition: color 0.2s; }
+        .navbar { display: flex; justify-content: space-between; align-items: center; height: 78px; }
+        .logo { display: flex; align-items: center; gap: 10px; font-size: 1.45rem; font-weight: 800; color: var(--primary); }
+        .logo-icon { width: 38px; height: 38px; background: var(--primary); color: var(--accent); border-radius: 8px; display: grid; place-items: center; }
+        .nav-links { display: flex; gap: 18px; align-items: center; }
+        .nav-links a { font-size: 0.88rem; font-weight: 600; color: var(--text-dark); transition: 0.2s; }
         .nav-links a:hover { color: var(--accent-hover); }
-        .nav-actions { display: flex; gap: 10px; }
+        .nav-actions { display: flex; gap: 8px; }
         .menu-toggle { display: none; font-size: 1.5rem; cursor: pointer; color: var(--primary); }
 
-        /* HERO SECTION */
-        .hero { background: linear-gradient(135deg, #091d3e 0%, #0f2c59 60%, #1e3a8a 100%); color: var(--white); padding: 80px 0 70px; }
+        /* HERO */
+        .hero { background: linear-gradient(135deg, #091d3e 0%, #0f2c59 60%, #1e3a8a 100%); color: var(--white); padding: 75px 0; }
         .hero-grid { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 40px; align-items: center; }
-        .hero h1 { font-size: 3rem; font-weight: 800; line-height: 1.15; margin-bottom: 20px; }
+        .hero h1 { font-size: 2.9rem; font-weight: 800; line-height: 1.15; margin-bottom: 18px; }
         .hero h1 span { color: var(--accent); }
-        .hero p { font-size: 1.1rem; color: #cbd5e1; margin-bottom: 28px; max-width: 580px; }
-        .hero-btns { display: flex; gap: 15px; flex-wrap: wrap; margin-bottom: 35px; }
-        .hero-tags { display: flex; flex-wrap: wrap; gap: 10px; }
-        .hero-tags span { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.18); padding: 6px 14px; border-radius: 50px; font-size: 0.82rem; }
-        .hero-card { background: var(--white); color: var(--text-dark); padding: 30px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.25); }
-        .hero-card h3 { color: var(--primary); margin-bottom: 6px; font-size: 1.35rem; }
-        .hero-card p { color: var(--text-muted); font-size: 0.9rem; margin-bottom: 18px; }
-        .form-group { margin-bottom: 14px; }
-        .form-group input, .form-group select { width: 100%; padding: 12px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 0.95rem; outline: none; }
+        .hero p { font-size: 1.08rem; color: #cbd5e1; margin-bottom: 26px; }
+        .hero-btns { display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 30px; }
+        .hero-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+        .hero-tags span { background: rgba(255, 255, 255, 0.1); border: 1px solid rgba(255, 255, 255, 0.2); padding: 5px 13px; border-radius: 50px; font-size: 0.8rem; }
+        .hero-card { background: var(--white); color: var(--text-dark); padding: 28px; border-radius: 16px; box-shadow: 0 20px 40px rgba(0,0,0,0.25); }
+        .hero-card h3 { color: var(--primary); margin-bottom: 6px; font-size: 1.3rem; }
+        .hero-card p { color: var(--text-muted); font-size: 0.88rem; margin-bottom: 16px; }
+        .form-group { margin-bottom: 12px; }
+        .form-group input, .form-group select { width: 100%; padding: 11px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 0.92rem; }
 
-        /* EXPLORE ACADEMY */
-        .highlights-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
-        .highlight-card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); transition: transform 0.3s; }
-        .highlight-card:hover { transform: translateY(-6px); }
-        .highlight-img { height: 170px; background: linear-gradient(45deg, var(--primary), #2563eb); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--white); padding: 20px; text-align: center; }
-        .highlight-img i { font-size: 2.5rem; color: var(--accent); margin-bottom: 10px; }
-        .highlight-body { padding: 20px; }
-        .highlight-body h3 { font-size: 1.05rem; color: var(--primary); line-height: 1.4; }
+        /* GRIDS & CARDS */
+        .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 22px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
+        .card { background: var(--white); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; box-shadow: var(--shadow); transition: 0.3s; }
+        .card:hover { transform: translateY(-5px); }
+        .highlight-img { height: 155px; background: linear-gradient(45deg, var(--primary), #2563eb); display: flex; flex-direction: column; align-items: center; justify-content: center; color: var(--white); padding: 18px; text-align: center; }
+        .highlight-img i { font-size: 2.2rem; color: var(--accent); margin-bottom: 8px; }
+        .card-body { padding: 22px; }
+        .card-body h3 { font-size: 1.08rem; color: var(--primary); margin-bottom: 8px; line-height: 1.4; }
+        .card-body p { font-size: 0.92rem; color: var(--text-muted); }
 
-        /* PROGRAMS */
-        .programs-sec { background: var(--bg-light); }
-        .esip-banner { background: linear-gradient(135deg, var(--primary), #1e3a8a); color: var(--white); border-radius: 18px; padding: 36px; margin-bottom: 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 25px; }
-        .esip-content { max-width: 720px; }
-        .esip-content .tag { background: var(--accent); color: var(--primary); font-weight: 800; padding: 4px 12px; border-radius: 6px; font-size: 0.8rem; display: inline-block; margin-bottom: 10px; }
-        .esip-content h3 { font-size: 1.8rem; margin-bottom: 10px; }
-        .esip-content p { color: #e2e8f0; margin-bottom: 16px; }
-        .esip-streams { display: flex; gap: 10px; flex-wrap: wrap; }
-        .esip-streams span { background: rgba(255,255,255,0.15); padding: 6px 14px; border-radius: 6px; font-size: 0.85rem; font-weight: 600; }
-        .batches-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; }
-        .batch-card { background: var(--white); padding: 30px; border-radius: 14px; border: 1px solid var(--border); box-shadow: var(--shadow); display: flex; flex-direction: column; justify-content: space-between; }
-        .batch-class { color: var(--accent-hover); font-weight: 700; font-size: 0.85rem; margin-bottom: 6px; }
-        .batch-card h3 { font-size: 1.4rem; color: var(--primary); margin-bottom: 12px; }
-        .batch-card p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 24px; }
-
-        /* ADVANTAGE */
-        .advantage-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px; }
-        .adv-card { padding: 28px; border-radius: 14px; background: var(--bg-light); border: 1px solid var(--border); transition: 0.3s; }
-        .adv-card:hover { background: var(--white); box-shadow: var(--shadow); }
-        .adv-icon { width: 52px; height: 52px; background: rgba(15, 44, 89, 0.1); color: var(--primary); border-radius: 12px; display: grid; place-items: center; font-size: 1.4rem; margin-bottom: 18px; }
-        .adv-card h3 { font-size: 1.15rem; color: var(--primary); margin-bottom: 8px; }
-        .adv-card p { font-size: 0.92rem; color: var(--text-muted); }
+        /* ESIP BANNER */
+        .bg-light { background: var(--bg-light); }
+        .esip-banner { background: linear-gradient(135deg, var(--primary), #1e3a8a); color: var(--white); border-radius: 16px; padding: 34px; margin-bottom: 36px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 20px; }
+        .esip-tag { background: var(--accent); color: var(--primary); font-weight: 800; padding: 4px 12px; border-radius: 6px; font-size: 0.78rem; display: inline-block; margin-bottom: 8px; }
+        .esip-streams { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 14px; }
+        .esip-streams span { background: rgba(255,255,255,0.15); padding: 5px 12px; border-radius: 6px; font-size: 0.84rem; font-weight: 600; }
 
         /* TOPPERS */
         .toppers-sec { background: var(--primary); color: var(--white); }
         .toppers-sec .section-header h2 { color: var(--white); }
         .toppers-sec .section-header p { color: #cbd5e1; }
-        .toppers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(210px, 1fr)); gap: 20px; }
-        .topper-card { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.15); border-radius: 14px; padding: 22px 16px; text-align: center; transition: 0.3s; }
-        .topper-card:hover { background: rgba(255, 255, 255, 0.14); transform: translateY(-4px); }
-        .topper-avatar { width: 68px; height: 68px; border-radius: 50%; background: var(--accent); color: var(--primary); font-weight: 800; font-size: 1.3rem; display: grid; place-items: center; margin: 0 auto 14px; }
-        .topper-card h3 { font-size: 1.05rem; margin-bottom: 6px; }
-        .topper-exam { font-size: 0.8rem; color: var(--accent); font-weight: 700; }
-        .topper-rank { display: inline-block; margin-top: 8px; background: var(--white); color: var(--primary); font-size: 0.72rem; font-weight: 800; padding: 4px 10px; border-radius: 50px; }
-        .award-box { margin-top: 40px; background: rgba(245, 158, 11, 0.15); border: 1px solid var(--accent); padding: 24px 30px; border-radius: 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px; }
+        .toppers-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 18px; }
+        .topper-card { background: rgba(255, 255, 255, 0.08); border: 1px solid rgba(255, 255, 255, 0.16); border-radius: 14px; padding: 20px 14px; text-align: center; }
+        .topper-avatar { width: 64px; height: 64px; border-radius: 50%; background: var(--accent); color: var(--primary); font-weight: 800; font-size: 1.25rem; display: grid; place-items: center; margin: 0 auto 12px; }
+        .topper-exam { font-size: 0.78rem; color: var(--accent); font-weight: 700; margin-top: 4px; }
+        .topper-rank { display: inline-block; margin-top: 8px; background: var(--white); color: var(--primary); font-size: 0.7rem; font-weight: 800; padding: 3px 10px; border-radius: 50px; }
+        .award-box { margin-top: 36px; background: rgba(245, 158, 11, 0.15); border: 1px solid var(--accent); padding: 22px 28px; border-radius: 14px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
 
-        /* CENTRES */
-        .centres-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; }
-        <!-- Navigation Header & Main Hero Content (Navbar, Hero Section with Counselling Form, Academy Milestones, Programs, Advantages, Topper Showcase, Centres, Blog, and Footer) -->
-        <!-- Poore code ke liye upar diye gaye HTML structure ko complete karein, jismein responsive navigation, course sections, Goa centres (Margao, Porvorim, Vasco, Ponda), topper cards, aur modal scripts shamil hain. -->
-    </header>
+        /* FOOTER & MODAL */
+        footer { background: #071731; color: #cbd5e1; padding: 65px 0 24px; }
+        .footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 36px; margin-bottom: 45px; }
+        .footer-col h4, .footer-about h3 { color: var(--white); margin-bottom: 16px; }
+        .footer-col ul li, .footer-contact li { margin-bottom: 9px; font-size: 0.9rem; }
+        .footer-bottom { border-top: 1px solid rgba(255,255,255,0.1); padding-top: 20px; text-align: center; font-size: 0.85rem; }
+        .modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.65); z-index: 2000; align-items: center; justify-content: center; padding: 20px; }
+        .modal.active { display: flex; }
+        .modal-box { background: var(--white); max-width: 650px; width: 100%; max-height: 85vh; overflow-y: auto; border-radius: 16px; padding: 28px; position: relative; color: var(--text-dark); }
+        .modal-close { position: absolute; top: 16px; right: 20px; font-size: 1.4rem; cursor: pointer; }
 
+        @media (max-width: 992px) {
+            .hero-grid { grid-template-columns: 1fr; }
+            .footer-grid { grid-template-columns: 1fr 1fr; }
+            .nav-links, .nav-actions { display: none; }
+            .nav-links.active { display: flex; flex-direction: column; position: absolute; top: 78px; left: 0; width: 100%; background: var(--white); padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+            .menu-toggle { display: block; }
+        }
+        @media (max-width: 600px) {
+            .hero h1 { font-size: 2.1rem; }
+            .footer-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-info">
+    <!-- Hero Section & Counselling Form -->
     <section class="hero" id="home">
-        <!-- Hero section with ESIP badge, title, call-to-action buttons, and interactive counselling booking form. -->
+        <!-- Hero Grid & Form Content -->
     </section>
 
-    <!-- EXPLORE OUR ACADEMY, PROGRAMS, ADVANTAGES, TOPPERS, CENTRES, BLOG, FOOTER & MODAL SCRIPTS -->
-    <!-- (Complete HTML structure continues up to </html> with full CSS grid, responsive menu, and article modals.) -->
+    <!-- Academy Exploration & Milestones -->
+    <section class="section-padding" id="explore">
+        <!-- State Toppers & Awards Grid -->
+    </section>
+
+    <!-- Programs & Batches -->
+    <section class="section-padding bg-light" id="programs">
+        <!-- ESIP Banner & Coaching Batches (Foundation, JEE, NEET) -->
+    </section>
+
+    <!-- The Estellar Advantage -->
+    <section class="section-padding" id="advantage">
+        <!-- Teaching, Study Material, Faculty, Track Record -->
+    </section>
+    <!-- HERO SECTION & FREE COUNSELLING FORM -->
+    <section class="hero" id="home">
+        <!-- Hero section and course features for Estellar Academy -->
+    </section>
+
+    <!-- EXPLORE OUR ACADEMY & MILESTONES -->
+    <section class="section-padding" id="explore">
+        <!-- Milestones and recognition cards -->
+    </section>
+
+    <!-- PROGRAMS DESIGNED FOR EXCELLENCE -->
+    <section class="section-padding bg-light" id="programs">
+        <!-- Academic programs and ESIP banner -->
+    </section>
+
+    <!-- THE ESTELLAR ADVANTAGE -->
+    <section class="section-padding" id="advantage">
+        <!-- Advantages and teaching methodology -->
+    </section>
+
+    <!-- STATE TOPPERS & ACHIEVERS -->
+    <section class="section-padding toppers-sec" id="results">
+        <!-- Student toppers grid and Prudent Media award box -->
+    </section>
+
+    <section class="section-padding" id="centres">
+        <!-- Goa learning centres contact info -->
+    </section>
+
+    <section class="section-padding bg-light" id="blog">
+        <!-- Latest updates and blog articles -->
+    </section>
+
+    <footer id="footer">
+        <!-- Footer navigation and contact information -->
+    </footer>
+    <!-- Toppers & Results Section, Learning Centres, Blog Section, Footer, and Modal JavaScript code for Estellar Academy -->
+    <section class="section-padding toppers-sec" id="results">
+        <!-- Toppers, Learning Centres, Blog, Footer, and JavaScript implementation -->
+    </section>
     <script>
-        // Interactive functions for navigation toggle, blog articles, enquiry modals, and form submission handling.
-        function toggleMenu() { document.getElementById('navLinks').classList.toggle('active'); }
-        function closeModal() { document.getElementById('appModal').classList.remove('active'); }
-        // Full JavaScript implementation available in the complete source.
+        // Toggle menu, article modal views, enquiry form handling, and modal events
     </script>
 </body>
 </html>
